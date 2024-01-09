@@ -3,7 +3,9 @@
     flex-flow: row wrap;
     text-align: center;
 }
-/* *= Universal Selector and applies to every child */
+    /* *= Universal Selector and applies to every child */
+
+    /* this is styling all of the childer nested in the container >=style all children of selected element that the selector has selected. */
 .container > * {
     padding: 10px;
     margin: 10px;
@@ -20,6 +22,7 @@
 .footer {
     background: lightgreen;
     height: 80px;
+    order: 4;
 }
 
 .main {
@@ -27,17 +30,29 @@
     text-align: left;
     height: 300px;
     font-size: 24px;
+    /* flex is shorthand for flex-grow, flex-shrink, flex-basis */
+    flex: 1 400px;
+    /* default order is zero */
+    order: 2;
 }
 
+.aside {
+    flex: 1;
+}
+    /* Order is determined by the higher the number the further down its placed */
 .aside1 {
     background: gold;
+    order: 1;
 }
 
 .aside2 {
     background: hotpink;
+    order: 2;
 }
 
-@media all and (min-width: 800px){
+    /* @media starts a media query. all is all thats at max width. */
+
+    /* @media all and (max-width: 800px){
     .main{
         flex: 3;
     }
@@ -63,4 +78,5 @@
     .aside{
         flex: 1;
     }
-}
+} 
+    */
